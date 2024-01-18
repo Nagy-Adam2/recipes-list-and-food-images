@@ -1,0 +1,10 @@
+<app-header (selected)="onSelect($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-food-of-recipes *ngIf="foodOfRecipesEnComp === 'food-of-recipes-en'"></app-food-of-recipes>
+      <app-foods-recipe-book *ngIf="foodsRecipeBookEnComp === 'foods-recipe-book-en' && foodOfRecipesEnComp !== 'food-of-recipes-en'"></app-foods-recipe-book>
+      <app-messages *ngIf="messagesEnComp === 'messages-en' && foodOfRecipesEnComp !== 'food-of-recipes-en'"></app-messages>   
+    </div>
+  </div>
+</div>
